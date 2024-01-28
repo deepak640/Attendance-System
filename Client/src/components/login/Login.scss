@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.left {
+    margin: 4em 2em;
+    float: left;
+    font-size: 14pt;
+    text-align: justify;
+    width: 50%;
+}
+
+.left h1 {
+    font-weight: 300;
+}
+
+.left button {
+    position: relative;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: #dc3535da;
+    transition: .4s ease-in;
+    z-index: 1;
+}
+
+.left button::before,
+.left button::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+
+.left .btn-1:hover {
+    background-color: #eb3838cd;
+    box-shadow: 6px 6px 0px #dc35354c;
+    top: -2px;
+    left: -2px;
+}
+
+.Login-container {
+    position: absolute;
+    backdrop-filter: blur(4px);
+    right: 4em;
+    width: 500px;
+    height: 520px;
+    margin-top: 2.2rem;
+    box-shadow: 0 10px 15px rgba(179, 179, 179, 0.7);
+    border-radius: 1%;
+    border: 2px solid #8c8c8c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+
+.hr1 {
+    border-top: 1px dashed #8c8b8b;
+    border-bottom: 1px dashed #fff;
+}
+
+.Login-container div h1,
+h3 {
+    line-height: 2;
+    font-size: 1.5rem;
+
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    height: 50px;
+    margin-bottom: 1.4rem;
+    margin-top: 1rem;
+}
+
+.your-input input {
+    width: 100%;
+    height: 50px;
+    padding-top: 1.4rem;
+    padding-left: 9px;
+    outline: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 3px;
+    transition: .2s;
+    background-color: inherit;
+}
+
+.your-input label {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.input input:focus~label,
+.input input:not(:placeholder-shown)~label {
+    top: 12%;
+    font-size: 0.8rem;
+    color: inherit;
+}
+
+.input input:focus {
+    border-width: 2px;
+    border-color: black;
+}
+
+.input input::placeholder {
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Login-container a {
+    padding: .2rem;
+}
+
+.Login-container a {
+    text-decoration: none;
+    width: max-content;
+    color: inherit;
+    font-style: italic;
+    transition: all 0.5s ease-in-out;
+}
+
+.Login-container a:hover {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Login-container button {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    color: black;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.Login-container button:hover {
+    background: rgb(26, 25, 25);
+    color: #fff;
+}
+
+.Login-main-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    width: 90%;
+    height: 80vh;
+    margin: 2% auto;
+    display: grid;
+    padding: 1.5rem;
+}
+.login-error{
+    display: none;
+    position: absolute;
+    left: 40%;
+    z-index: 3;
+    transition: all ease-in 2s;
+}
+@media (max-width:990px) {
+    .Login-container {
+        position: static;
+        margin-left: 2em;
+        margin-top: 0;
+        width: 90%;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .Login-container div h1,
+    h3 {
+        line-height: 1;
+        font-size: 1.2em;
+
+    }
+
+}

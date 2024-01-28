@@ -1,0 +1,128 @@
+get http://localhost:4000
+
+###
+
+post http://localhost:4000/users/Register
+Content-Type: application/json
+
+{
+        "Fac_ID":"32904",
+        "Fac_Name":"deepak",
+        "Department":"Prof of Commerce",
+        "Phone_no":7292098071,
+        "Email":"dnei@gmail.com",
+        "Password":"Deepak123"
+}
+
+###
+
+post http://localhost:4000/users/Login
+Content-Type: application/json 
+
+{
+        "Fac_ID":132904,
+        "Email":"dgi@gmail.com",
+        "Password":"Deek123"
+}
+
+###
+
+post http://localhost:4000/addstudent
+Content-Type: application/json
+
+{
+        "Fac_ID":132904,
+        "Sname":"Nikhil",
+        "Course":"BCA",
+        "Enroll_no":"065",
+        "Attendance": "Stable"
+}
+
+###
+
+post http://localhost:4000/getstudent
+Content-Type: application/json
+
+{
+        "Fac_ID":132904,
+        "courses":"BBA"
+}
+
+###
+
+post http://localhost:4000/update
+Content-Type: application/json
+
+{
+        "Enroll_no":"01702020",
+        "Attendance":"Present"
+}
+
+###
+
+post http://localhost:4000/addcourses
+Content-Type: application/json
+
+{
+        "Fac_ID":"132904",
+        "courses":"BCA"
+}
+###
+
+post http://localhost:4000/deletecourses
+Content-Type: application/json
+
+{
+        "Fac_ID":"132904",
+        "courses":"BCA"
+}
+
+###
+
+post http://localhost:4000/reset
+Content-Type: application/json
+
+{
+        "Course":"BCA",
+        "Attendance":"Stable"
+}
+
+###
+post http://localhost:4000/users/contact
+Content-Type: application/json 
+
+{
+        "Name":"deeppak",
+        "Email":"dneg@gmail.com",
+        "Message":"Deepak123"
+}
+###
+GET  http://localhost:4000/users/Admin
+
+###
+GET http://localhost:4000/users/query
+
+###
+
+post http://localhost:4000/users/delete
+Content-Type: application/json 
+
+{
+        "Fac_ID":"132904"
+}
+###
+GET http://localhost:4000/student-data
+###
+post http://localhost:4000/delete
+Content-Type: application/json 
+
+{
+        "Enroll_no":"065"
+}
+###
+post http://localhost:4000/getcourses
+Content-Type: application/json 
+
+{
+        "Fac_ID":"132904"
+}

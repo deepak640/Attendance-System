@@ -1,0 +1,124 @@
+.info h1,
+h2 {
+    font-weight: 500;
+    font-size: 23px;
+}
+
+.info h2 {
+    font-size: 15px;
+    color: darkgrey;
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 160px;
+    background: linear-gradient(24deg, rgba(244, 157, 26, 0.53), rgba(220, 53, 53, 0.84));
+    box-shadow: 0 15px 50px rgb(0, 0, 0, 0.35);
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+    height: 300px;
+}
+
+.pb {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 1)), url('../../fav.png');
+    background-color: rgba(169, 169, 169, 0.788);
+    border-radius: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 110px;
+    width: 110px;
+    box-shadow: 0 15px 50px rgb(0, 0, 0, 0.35);
+    transition: all 0.4s ease-in-out;
+}
+
+.pb h1 {
+    text-align: center;
+    margin-top: 40%;
+    opacity: 0.8;
+    font-size: 20pt;
+    transition: all ease-in-out 0.3s;
+    color: darkolivegreen;
+}
+
+.card:hover .pb {
+    height: 170px;
+    width: 170px;
+}
+
+.card:hover .pb h1 {
+    color: burlywood;
+    font-size: 28pt;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 0px 10px 0px;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover .info {
+    display: flex;
+    padding: 150px 0px 10px 0px;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    opacity: 0;
+    padding: 10px 50px;
+    justify-content: space-between;
+    transform: translateX(-20px);
+    transition-timing-function: linear;
+    transition-duration: 0s, 0.2s, 0.2s;
+    transition-property: z-index, opacity, transform;
+    transition-delay: 0.2s, 0s, 0s;
+}
+
+#detailed {
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    background-color: pink;
+    border: solid 1px grey;
+    color: grey;
+    font-weight: 500;
+    margin: auto;
+}
+
+#detailed:hover {
+    background-color: #ff5f96;
+    color: white;
+}
+
+.card:hover .buttons {
+    opacity: 1;
+    z-index: 0;
+    transform: translateX(1px);
+    transition-timing-function: linear;
+    transition-duration: 0s, 0.3s, 0.3s;
+    transition-property: z-index, opacity, transform;
+    transition-delay: 0.2s, 0s, 0s;
+}
+
+.card-container {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.card-container .row {
+    gap: 3em;
+}
